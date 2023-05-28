@@ -61,10 +61,21 @@ export default {
     .photo{
         border-radius: 17px;
         margin-bottom: 10px;
+        transition: transform 0.3s;
     }
     .mg{
         background-color: pink;
         border: 1px solid white;
         border-radius: 3px;
+        transition: all 0.3s;
+    }
+    .photo:hover{
+        transform: translateY(-10px);
+        color:aquamarine;
+    }
+    .mg:hover{
+        transform: translatey(-3px);
+        color: white;
+        background-color: crimson;
     }
 </style>

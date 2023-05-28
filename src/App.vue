@@ -1,6 +1,6 @@
 <template>
 
-  <div class="main">
+  <!-- <div class="main">
     <div>
       <h3 v-if="this.hide===false">If you want to see bio,click open</h3>
       <h3 v-if="this.hide===true">If you want to hide bio,click hide.</h3>
@@ -16,58 +16,44 @@
     <div>
       <Anime/>
     </div>
-  </div>
+  </div> -->
+  <Heading />
+  <Mid/>
+  <Bottom>
+    <p>This is my first vue project And i think everybody likes it.</p>
+  </Bottom>
 
   
 </template>
 
 <script>
-import Bio from './components/bio.vue'
-import Anime from './components/FavouriteAnime.vue'
+
+import Heading from './components/project/HeadingProject.vue'
+import Mid from './components/project/MidProject.vue'
+import Bottom from './components/project/BottomProject.vue'
 
 export default {
   name: 'App',
   components: {
-    Bio,
-    Anime
+
+    Heading,
+    Mid,
+    Bottom
   },
-  data(){
-    return{
-        hide:false,
-    }
-  },
-  methods:{
-    hideBio(){
-        this.hide=false,
-        this.anime=false
-    },
-    openBio(){
-      this.hide=true,
-      this.anime=true
-    }
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color: grey;
+}
+p{
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color:pink;
 }
-.clickBox{
-  background-color: rgba(38, 226, 18, 0.708);
-  border: 1px solid gray;
-  border-radius: 3px;
-}
-.main{
-  display: flex;
-  justify-content: space-evenly;
-}
-h3{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+.changebc{
+  background-color: red;
 }
 </style>
